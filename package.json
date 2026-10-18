@@ -1,0 +1,9 @@
+{
+  "name": "kodak-apparel-hero",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Kodak Apparel page",
+  "scripts": {
+    "dev": "node server.js"
+  }
+}

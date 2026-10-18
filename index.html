@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kodak Apparel — Hero</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="hero" aria-label="Kodak Apparel hero">
+      <div class="hero__stage">
+        <nav class="nav" aria-label="Main navigation">
+          <div class="nav__main">
+            <a class="nav__logo" href="#top" aria-label="Kodak Apparel home"><img src="assets/nav-logo.png" alt="" /></a>
+            <div class="nav__links">
+              <a href="#new">NEW</a>
+              <a href="#men">MEN</a>
+              <a href="#women-kids">WOMEN KIDS</a>
+              <a href="#acc">ACC</a>
+              <a href="#shoes">SHOES</a>
+              <a href="#sale">SALE</a>
+              <a href="#promotion">PROMOTION</a>
+            </div>
+          </div>
+          <div class="nav__utils">
+            <button type="button" aria-label="Search"><img src="assets/nav-search.svg" alt="" /></button>
+            <button type="button" aria-label="Account"><img src="assets/nav-user.svg" alt="" /></button>
+            <button type="button" class="nav__bag" aria-label="Bag, 0 items"><img src="assets/nav-bag.svg" alt="" /><span>0</span></button>
+          </div>
+        </nav>
+        <div class="hero__title" aria-label="Kodak Apparel. The Kodak Moment.">
+          <h1 class="hero__brand">KODAK<br />APPAREL</h1>
+          <p class="hero__headline">THE ( KODAK )<br />MOMENT</p>
+          <img class="hero__mark hero__mark--left" src="assets/1c858.svg" alt="" />
+          <img class="hero__mark hero__mark--middle" src="assets/f1497.svg" alt="" />
+          <img class="hero__mark hero__mark--small" src="assets/4cd69.svg" alt="" />
+          <img class="hero__mark hero__mark--right" src="assets/d237f.svg" alt="" />
+        </div>
+        <div class="hero__captions" aria-label="Moment captions">
+          <span>THE ( KODAK ) MOMENT</span>
+          <span>THE ( ICONIC ) MOMENT</span>
+          <span>THE ( HYEYOON ) MOMENT</span>
+        </div>
+      </div>
+    </main>
+    <section class="video-section" aria-label="Kodak Apparel video section">
+      <img src="assets/video-poster.png" alt="Friends smiling together beneath the camera" />
+    </section>
+    <section class="menu-section" aria-label="Shop by category">
+      <div class="menu-section__stage">
+        <nav class="menu-section__list" aria-label="Product categories">
+          <a id="men" href="#men">MEN</a>
+          <a id="women-kids" href="#women-kids">WOMEN</a>
+          <a id="kids" href="#kids">KIDS</a>
+          <a id="acc" href="#acc">ACC</a>
+          <a id="shoes" href="#shoes">SHOES</a>
+          <a id="sale" href="#sale">SALE</a>
+        </nav>
+        <p class="menu-section__caption">Every moment deserves to be remembered.<br />Wear the colors that turn everyday life into lasting memories.</p>
+      </div>
+    </section>
+    <section class="con1-section" id="con1" aria-label="This month's Kodak">
+      <div class="con1-section__stage">
+        <div class="con1-section__heading">
+          <h2>THIS MONTH'S KODAK</h2>
+          <p>이달의 코닥</p>
+        </div>
+        <div class="con1-section__products" id="con1-products"></div>
+        <article class="con1-feature con1-feature--top">
+          <div class="con1-feature__head"><span>RGB AeroCool</span><span>K6223<br />LRS54IVR</span></div>
+          <div class="con1-feature__image"><img src="assets/con1/center-top.png" alt="Woman wearing a light dress in a Kodak themed shop" /></div>
+        </article>
+        <p class="con1-section__message">Capture the Moment<br />Everyday Kodak<br />The iconic moment.kodak</p>
+        <article class="con1-feature con1-feature--bottom">
+          <div class="con1-feature__head"><span>RGB AeroCool</span><span>K6223<br />LRS54IVR</span></div>
+          <div class="con1-feature__image"><img src="assets/con1/center-bottom.png" alt="Person in a striped shirt holding a camera" /></div>
+        </article>
+      </div>
+    </section>
+    <section class="con2-section" id="con2" aria-label="Weekly best">
+      <div class="con2-section__stage">
+        <header class="con2-section__title">
+          <h2>WEEKLY<br />BEST</h2>
+          <p>KODAK WEEKLY BEST 상품을 만나보세요!<br />KODAK의 인기 상품을 가득 담아낸<br />WEEKLY BEST의 기록을 살펴봐요.</p>
+          <a href="#con2-products">Go to Shopping</a>
+        </header>
+        <div class="con2-section__products" id="con2-products"></div>
+      </div>
+    </section>
+    <section class="banner-section" aria-label="Kodak special door">
+      <div class="banner-section__stage">
+        <img class="banner-section__image" src="assets/banner.png" alt="Kodak apparel store" />
+        <h2 class="banner-section__title">SPEALAL<br />DOOR</h2>
+        <p class="banner-section__description">코닥의 헤리티지와 아카이브 감성을 담은 특별한 공간</p>
+      </div>
+    </section>
+    <section class="con3-section" id="con3" aria-label="Kodak's color">
+      <div class="con3-section__stage">
+        <header class="con3-section__heading">
+          <h2>KODAK’S COLOR</h2>
+          <p>코닥 픽 컬러</p>
+        </header>
+        <article class="con3-card con3-card--ivory">
+          <img class="con3-card__base" src="assets/con3/base.svg" alt="" />
+          <img class="con3-card__photo" src="assets/con3/ivory-photo.png" alt="Ivory Kodak apparel and accessories" />
+          <p class="con3-card__number">One</p>
+          <h3>IVORY<br />PICKS</h3>
+          <p class="con3-card__caption">부드럽고 화사한 에센셜 컬러</p>
+        </article>
+        <article class="con3-card con3-card--yellow">
+          <img class="con3-card__base" src="assets/con3/base.svg" alt="" />
+          <img class="con3-card__photo" src="assets/con3/yellow.svg" alt="Yellow Kodak apparel and accessories" />
+          <p class="con3-card__number">Two</p>
+          <h3>YELLO<br />PICKS</h3>
+          <p class="con3-card__caption">코닥의 아이코닉 컬러</p>
+        </article>
+        <article class="con3-card con3-card--blue">
+          <img class="con3-card__photo" src="assets/con3/blue.svg" alt="Blue Kodak apparel and accessories" />
+          <p class="con3-card__number">Three</p>
+          <h3>BLUE<br />PICKS</h3>
+          <p class="con3-card__caption">꾸준히 사랑받는 쿨한 무드의 컬러</p>
+        </article>
+      </div>
+    </section>
+    <section class="con4-section" id="con4" aria-label="Instagram">
+      <div class="con4-section__stage">
+        <header class="con4-section__heading">
+          <h2>INSTAGRAM</h2>
+          <p>인스타그램</p>
+        </header>
+        <div class="con4-section__inner">
+          <div class="con4-photo con4-photo--hero">
+            <img class="con4-photo__base" src="assets/con4/base.svg" alt="" />
+            <img class="con4-photo__image" src="assets/con4/hero.png" alt="Colorful Kodak cameras" />
+          </div>
+          <div class="con4-copy con4-copy--hero">
+            <h3>코닥만의 컬러로 완성하는 여름 티셔츠 &amp; 반바지 코디</h3>
+            <p>아카이빙 그래픽의 티셔츠와 가벼운 컬러 반바지로 보기만 해도 시원한 썸머룩 완성!</p>
+            <span class="con4-copy__read">Read</span>
+          </div>
+          <div class="con4-photo con4-photo--summer-two">
+            <img src="assets/con4/summer-2.svg" alt="Kodak archive summer T-shirt" />
+          </div>
+          <div class="con4-copy con4-copy--summer-two">
+            <h3>KODAK ARCHIVE SUMMER</h3>
+            <p>코닥의 아카이브 그래픽과 컬러 헤리티지를 담은 백그래픽 티셔츠<br />무더위 걱정 없는 에어로쿨 소재로 언제나 쾌적한 하루를 느껴보세요.</p>
+            <span class="con4-copy__read">Read</span>
+          </div>
+          <div class="con4-photo con4-photo--summer-one">
+            <img class="con4-photo__base" src="assets/con4/base.svg" alt="" />
+            <img class="con4-photo__image" src="assets/con4/summer-1.png" alt="Green Kodak archive summer T-shirt" />
+          </div>
+          <div class="con4-copy con4-copy--summer-one">
+            <h3>KODAK ARCHIVE SUMMER</h3>
+            <p>남미의 강렬함을 담아 컬러풀한 드로잉을 그려내는 아티스트 알란 베리 리스<br />138년 코닥 아카이브를 알란 베리 리스의 시선으로 재해석해 완성한<br />A Kodak Moment™ 를&nbsp; 만나보세요.</p>
+            <span class="con4-copy__read">Read</span>
+          </div>
+          <div class="con4-copy con4-copy--poster">
+            <h3>1, 2, 3, SAY KODAK!</h3>
+            <p>남미의 강렬함을 담아 컬러풀한 드로잉을 그려내는 아티스트 알란 베리 리스<br />138년 코닥 아카이브를 알란 베리 리스의 시선으로 재해석해 완성한<br />A Kodak Moment™ 를&nbsp; 만나보세요.</p>
+            <span class="con4-copy__read">Read</span>
+          </div>
+          <div class="con4-photo con4-photo--poster">
+            <img class="con4-photo__base" src="assets/con4/base.svg" alt="" />
+            <img class="con4-photo__image" src="assets/con4/poster.png" alt="1, 2, 3, Say Kodak poster" />
+          </div>
+          <div class="con4-section__more">more</div>
+        </div>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div class="site-footer__stage">
+        <h2 class="site-footer__brand">KODAK APPAREL</h2>
+        <div class="site-footer__top">
+          <div class="site-footer__top-group">
+            <p>CEO. Jun Kwon Lee</p>
+            <p>Business License No. 788-81-01239</p>
+            <p>Mail Order Business Registration. No. 2019-성남분당B-0523</p>
+          </div>
+          <div class="site-footer__top-group">
+            <p>CS Center</p>
+            <p>Mon - Fri (10:00 - 16:00)</p>
+            <p>문의전용 : heeji.nam@hibs.co.kr</p>
+            <p>마케팅제휴 : marketing@hibs.co.kr</p>
+            <p>Customer Service</p>
+          </div>
+          <div class="site-footer__top-group">
+            <p>매장 안내</p>
+            <p>대리점 입점 문의 : seoungwon.seo@hibs.co.kr (010-6476-4160)</p>
+            <p>해외 비즈니스 문의 : sanglak@hibs.co.kr (010-4508-9271)</p>
+          </div>
+          <div class="site-footer__top-group">
+            <p>Term of Use</p>
+            <p>개인정보처리방침</p>
+            <p>Order Tracking</p>
+            <p>Notice</p>
+            <p>Q&amp;A</p>
+            <p>대량주문 문의</p>
+          </div>
+        </div>
+        <div class="site-footer__bottom">
+          <div class="site-footer__address">
+            <p>Address. 801 PDC Building A-Dong 8F, 242, Pangyo-ro, Bundang-gu, Seongnam-si, Gyeonggi, Korea</p>
+            <p>Hilight Brands is a division within Modern Works.<br />The Kodak trademark, logo and trade dress are<br />used by Modern Works under license from Eastman Kodak Company.</p>
+          </div>
+          <div class="site-footer__returns">
+            <p>반품 &amp; 교환</p>
+            <p>반품배송지 : 경기도 이천시 호법면 안평리 83번지 1층</p>
+          </div>
+          <p class="site-footer__service">Customer Service</p>
+          <a class="site-footer__instagram" href="https://www.instagram.com/kodakstyle_kr/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <p class="site-footer__copyright">ⓒ 2020 Hilight Brands.</p>
+          <p class="site-footer__company">Hilight Brands</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
