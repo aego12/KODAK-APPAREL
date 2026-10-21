@@ -29,7 +29,12 @@
             </div>
           </div>
           <div class="nav__utils">
-            <button type="button" aria-label="Search"><img src="assets/nav-search.svg" alt="" /></button>
+            <div class="nav__search">
+              <button class="nav__search-trigger" type="button" aria-label="Search"><img src="assets/nav-search.svg" alt="" /></button>
+              <form class="nav__search-field" action="https://hilightbrands-kodak.co.kr/product/search.html" method="get" role="search">
+                <input type="search" name="keyword" aria-label="상품 검색어" placeholder="SEARCH" />
+              </form>
+            </div>
             <button type="button" aria-label="Account"><img src="assets/nav-user.svg" alt="" /></button>
             <button type="button" class="nav__bag" aria-label="Bag, 0 items"><img src="assets/nav-bag.svg" alt="" /><span>0</span></button>
           </div>
@@ -135,7 +140,7 @@
     <section class="con2-section" id="con2" aria-label="Weekly best">
       <div class="con2-section__stage">
         <header class="con2-section__title">
-          <h2>WEEKLY<br />BEST</h2>
+          <h2 aria-label="WEEKLY BEST"><span class="weekly-title-line weekly-title-line--first" aria-hidden="true">WEEKLY</span><span class="weekly-title-line weekly-title-line--second" aria-hidden="true">BEST</span></h2>
           <svg class="con2-section__motion" width="693.768" height="338.24" viewBox="0 0 693.768 338.24" aria-hidden="true">
             <defs>
               <clipPath id="weekly-motion-yellow-clip"><rect width="693.768" height="205" /></clipPath>
@@ -274,7 +279,7 @@
             <p>반품배송지 : 경기도 이천시 호법면 안평리 83번지 1층</p>
           </div>
           <p class="site-footer__service">Customer Service</p>
-          <a class="site-footer__instagram" href="https://www.instagram.com/kodakstyle_kr/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="site-footer__instagram" href="https://www.instagram.com/kodakstyle_kr/" target="_blank" rel="noopener noreferrer"><span class="button-roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span></a>
           <p class="site-footer__copyright">ⓒ 2020 Hilight Brands.</p>
           <p class="site-footer__company">Hilight Brands</p>
         </div>

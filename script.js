@@ -34,6 +34,16 @@ if (navigation) {
   navigation.addEventListener('focusin', () => navigation.classList.remove('is-hidden'));
 }
 
+const navigationSearch = document.querySelector('.nav__search');
+if (navigationSearch) {
+  const searchTrigger = navigationSearch.querySelector('.nav__search-trigger');
+  const searchInput = navigationSearch.querySelector('input[type="search"]');
+  searchTrigger.addEventListener('click', () => searchInput.focus());
+  searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') searchInput.blur();
+  });
+}
+
 async function drawHeroOnce() {
   const hero = document.querySelector('.hero');
   if (!hero) return;
@@ -384,6 +394,23 @@ if (productContainer) {
 
 }
 
+const sectionHeadings = document.querySelectorAll('.con1-section__heading, .con2-section__title, .con3-section__heading, .con4-section__heading');
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+  const headingObserver = new IntersectionObserver((entries, observer) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }
+  }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+
+  sectionHeadings.forEach((heading) => {
+    heading.classList.add('section-heading-reveal');
+    if (!heading.classList.contains('con2-section__title')) heading.classList.add('section-heading-reveal--bilingual');
+    headingObserver.observe(heading);
+  });
+}
+
 const weeklyTitle = document.querySelector('.con2-section__title');
 const weeklyYellowStroke = document.querySelector('#weekly-motion-yellow-stroke');
 const weeklyBlackStroke = document.querySelector('#weekly-motion-black-stroke');
@@ -459,6 +486,36 @@ if (weeklyContainer) {
       </div>
     </div>
   `).join('');
+}
+
+const cardFadeItems = document.querySelectorAll('.con1-product__head, .con1-product__image, .con1-product__details, .con1-product__actions, .con1-product__colors, .con1-feature__head, .con1-feature__image, .con1-section__message, .con4-photo, .con4-copy h3, .con4-copy p, .con4-copy__read');
+const colorCards = document.querySelectorAll('.con3-card');
+const weeklyFadeRows = document.querySelectorAll('.con2-products__row');
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+  const cardFadeObserver = new IntersectionObserver((entries, observer) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      if (entry.target.classList.contains('con2-products__row')) {
+        entry.target.querySelectorAll('.card-scroll-fade').forEach((item) => item.classList.add('is-visible'));
+      } else if (entry.target.classList.contains('con3-card')) {
+        colorCards.forEach((card) => card.classList.add('is-visible'));
+      } else {
+        entry.target.classList.add('is-visible');
+      }
+      observer.unobserve(entry.target);
+    }
+  }, { threshold: 0.05, rootMargin: '0px 0px -5% 0px' });
+
+  cardFadeItems.forEach((item) => {
+    item.classList.add('card-scroll-fade');
+    cardFadeObserver.observe(item);
+  });
+  colorCards.forEach((card) => card.classList.add('card-scroll-fade'));
+  if (colorCards.length) cardFadeObserver.observe(colorCards[0]);
+  weeklyFadeRows.forEach((row) => {
+    row.querySelectorAll('.con2-product__image, .con2-product__details, .con2-product__actions, .con2-product__colors').forEach((item) => item.classList.add('card-scroll-fade'));
+    cardFadeObserver.observe(row);
+  });
 }
 
 function enableProductActions(container) {
